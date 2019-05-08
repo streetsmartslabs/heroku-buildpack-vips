@@ -3,7 +3,7 @@
 
 set -e
 
-version=8.6.2
+version=8.7.4
 
 BUILD_DIR=$1
 CACHE_DIR=$2
@@ -48,7 +48,7 @@ function vendor() {
 
 echo "Vendoring binaries" | arrow
 
-vendor "wget https://kespry-packages.s3.amazonaws.com/vips/$STACK/libvips-$version.tgz" "$BUILD_DIR/vendor/vips" # FIXME: unharcode version
+vendor "wget https://github.com/libvips/libvips/releases/download/v$version/vips-$version.tar.gz" "$BUILD_DIR/vendor/vips" # FIXME: unharcode version
 
 echo "Tweaking glib include paths" | arrow
 
