@@ -48,7 +48,7 @@ function vendor() {
 
 echo "Vendoring binaries" | arrow
 
-vendor "wget https://github.com/libvips/libvips/releases/download/v$version/vips-$version.tar.gz" "$BUILD_DIR/vendor/vips"
+vendor "wget https://github.com/libvips/libvips/archive/v$version.tar.gz"
 
 echo "Tweaking glib include paths" | arrow
 
